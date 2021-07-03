@@ -22,7 +22,7 @@ Website of the latest construction investment of Spółdzielnia Mieszkaniowa Bud
 Description of the investment, apartment plans, floor plans. List of availability of apartments and garages. Basic information about the construction technology of the building. Visualisation. 
 
 ## Screenshots
-![Example screenshot](./img/inwestycjagithub.jpg)
+![Example screenshot](./images/inwestycjagithub.jpg)
 
 ## Technologies
 * HTML 5 
