@@ -36,7 +36,7 @@ https://www.smbudowlani.pl/inwestycja/
 
 ## Code Examples
 Show examples of usage:
-'
+<!--
 <div id="menu">
     <ul id="slide-out" class="side-nav">
         <li>
@@ -65,7 +65,7 @@ Show examples of usage:
     </ul>
     <p>Projekt/Wykonanie:  <a class="twitter-text-hvr" href="http://golata.eu">IT HELP </a></p>
 </div>
-'
+-->
 ## Features
 List of features ready and TODOs for future development
 To-do list:
