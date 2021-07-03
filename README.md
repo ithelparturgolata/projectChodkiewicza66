@@ -61,11 +61,7 @@ Show examples of usage:
             <a href="#"><i class="ion-social-instagram-outline"></i></a>
             <a href="#"><i class="ion-social-youtube-outline"></i></a>
           -->
-        </li>
-    </ul>
-    <p>Projekt/Wykonanie:  <a class="twitter-text-hvr" href="http://golata.eu">IT HELP </a></p>
-</div>
--->
+
 ## Features
 List of features ready and TODOs for future development
 To-do list:
