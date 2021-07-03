@@ -1,0 +1,264 @@
+/* Media Query StyleSheet */
+
+/*
+* ----------------------------------------------------------------------------------------
+Author       : Ahmed Essam
+Template Name: Eye-Look is a Personal Portfolio Template
+Version      : 1.0
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/* ---------------------Custom, iPhone Retina------------------------- */
+
+@media only screen and (min-width: 250px) {
+    
+        html {
+
+}
+    #section0 .bg {
+        -webkit-animation: animate 60s linear infinite;
+        -moz-animation: animate 60s linear infinite;
+        -ms-animation: animate 60s linear infinite;
+        -o-animation: animate 60s linear infinite;
+        animation: animate 60s linear infinite;
+    }
+    .content h3 {
+        font-size: 8px;
+    }
+    .content h1 {
+        font-size: 50px;
+    }
+    .carousel {
+        
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .circle-container {
+    width: 240px;
+    margin: auto;
+    border: 1px solid #EEE;
+    transition: all .5s ease-in;
+    margin-top: 10px;
+}
+    
+    .about p {
+color: #878787;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 15px 10px 20px;
+    line-height: 30px;
+    max-width: 100ch;
+}
+    
+    
+    
+}
+
+
+/* -----------------------------Extra Small Devices, Phones------------------------- */
+
+@media only screen and (min-width: 480px) {
+    
+        html {
+}
+    #section0 .bg {
+        -webkit-animation: animate 100s linear infinite;
+        -moz-animation: animate 100s linear infinite;
+        -ms-animation: animate 100s linear infinite;
+        -o-animation: animate 100s linear infinite;
+        animation: animate 100s linear infinite;
+    }
+    .content h3 {
+        font-size: 7px;
+    }
+    .content h1 {
+        font-size: 55px;
+    }
+    
+    .carousel {
+        
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+        .circle-container {
+    width: 240px;
+    margin: auto;
+    border: 1px solid #EEE;
+    transition: all .5s ease-in;
+    margin-top: 10px;
+}
+    
+        .about p {
+color: #878787;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 15px 10px 20px;
+    line-height: 30px;
+    max-width: 100ch;
+}
+}
+
+
+/* -------------------Small Devices, Tablets-------------------------- */
+
+@media only screen and (min-width: 768px) {
+    
+    html {
+
+}
+    #section0 .bg {
+        -webkit-animation: animate 100s linear infinite;
+        -moz-animation: animate 100s linear infinite;
+        -ms-animation: animate 100s linear infinite;
+        -o-animation: animate 100s linear infinite;
+        animation: animate 100s linear infinite;
+    }
+    .content h3 {
+        font-size: 8px;
+    }
+    .content h1 {
+        font-size: 80px;
+    }
+    
+    .carousel {
+        
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+            .circle-container {
+    width: 240px;
+    margin: auto;
+    border: 1px solid #EEE;
+    transition: all .5s ease-in;
+    margin-top: 0px;
+}
+    
+            .about p {
+color: #878787;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 15px 10px 20px;
+    line-height: 30px;
+    max-width: 100ch;
+}
+}
+
+
+/* -------------------------Medium Devices, Desktops--------------------------- */
+
+@media only screen and (min-width: 992px) {
+    
+    html {
+
+}
+    
+    #section0 .bg {
+        -webkit-animation: animate 120s linear infinite;
+        -moz-animation: animate 120s linear infinite;
+        -ms-animation: animate 120s linear infinite;
+        -o-animation: animate 120s linear infinite;
+        animation: animate 120s linear infinite;
+    }
+    .content h3 {
+        font-size: 10px;
+    }
+    .content h1 {
+        font-size: 80px;
+    }
+    
+    .carousel {
+        
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .circle-container {
+    width: 240px;
+    margin: auto;
+    border: 1px solid #EEE;
+    transition: all .5s ease-in;
+    margin-top: 0px;
+}
+    
+                .about p {
+color: #878787;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0px 10px 20px;
+    line-height: 27px;
+    max-width: 100ch;
+}
+    
+}
+
+
+/* -------------------------Large Devices, Wide Screens-------------------------------- */
+
+@media only screen and (min-width: 1600px) {
+    
+    html {
+        
+        overflow-x: visible !important;
+    overflow-y: visible !important;
+
+        
+}
+    #section0 .bg {
+        -webkit-animation: animate 150s linear infinite;
+        -moz-animation: animate 150s linear infinite;
+        -ms-animation: animate 150s linear infinite;
+        -o-animation: animate 150s linear infinite;
+        animation: animate 150s linear infinite;
+    }
+    .content h3 {
+        font-size: 10px;
+    }
+    .content h1 {
+        font-size: 100px;
+    }
+    
+    .carousel {
+        
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+                .circle-container {
+    width: 240px;
+    margin: auto;
+    border: 1px solid #EEE;
+    transition: all .5s ease-in;
+    margin-top: 0px;
+}
+    
+    .side-nav li {
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+    
+                .about p {
+color: #878787;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0px 10px 20px;
+    line-height: 27px;
+    max-width: 100ch;
+}
+    
+    
+    
+    
+
+}
+
+
+/* Media */
