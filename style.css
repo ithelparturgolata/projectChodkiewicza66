@@ -1,0 +1,1106 @@
+/*
+* ----------------------------------------------------------------------------------------
+Author       : Ahmed Essam
+Template Name: Eye-Look is a Personal Portfolio Template
+Version      : 1.0
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GLOBAL CSS STYLE
+* 02.PRELOADER & BOUNCE CCS STYLE
+* 03.HOMEPAGE CSS STYLE
+* 04.SIDE-NAV STYLE
+* 05.ABOUT ME STYLE
+* 06.MY SKILLS STYLE
+* 07.SKILLS CSS STYLE
+* 08.MY SERVICES STYLE
+* 09.MY WORK STYLE
+* 10.TESTIMONIALS & FUN FACTS
+* 11.CONTACT ME STYLE
+* 12.FIND ME STYLE
+
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.START GLOBAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/* Google Fonts */
+
+@import url('http://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400');
+@font-face {
+    font-family: "Ionicons";
+    src: url("../fonts/ionicons.eot?v=2.0.0");
+    src: url("../fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"), url("../fonts/ionicons.ttf?v=2.0.0") format("truetype"), url("../fonts/ionicons.woff?v=2.0.0") format("woff"), url("../fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+
+
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.section {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+
+.fp-enabled body, html.fp-enabled {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    overflow: visible;
+}
+
+
+/* Start Adjust Materialize Container Width */
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+
+@media only screen and (min-width: 601px) .container {
+    width: 85%;
+}
+
+@media only screen and (min-width: 993px) .container {
+    width: 70%;
+}
+
+h2 {
+    display: inline-block;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 30px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+p {
+    color: #878787;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+}
+
+.btn,
+.btn-large {
+    text-decoration: none;
+    color: #fff;
+    background-color: #1e88e5;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn-large:hover {
+    background-color: rgba(30, 136, 229, 0.8);
+}
+
+
+
+/* Centered texts in each section
+* --------------------------------------- */
+
+.section {
+    text-align: center;
+}
+
+
+/* START Adjust FullPage.js */
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 12px;
+    width: 12px;
+    border: 0;
+    left: 50%;
+    margin: -6px;
+    top: 50%;
+    background-color: #FFF !important;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    background: #333;
+    border: 2px solid #888;
+}
+
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span {
+    background-color: #333 !important;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    height: 12px;
+    width: 12px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+    background-color: #333 !important;
+}
+
+#fp-nav ul li .fp-tooltip {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-weight: 300;
+    font-size: 18px;
+    margin-right: 5px;
+    top: -15px;
+    color: #00aeef;
+    border-radius: 4px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* END Adjust FullPage.js */
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.END GLOBAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.START PRELOADER & BOUNCE CCS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.loader-container {
+    background: #000;
+    position: fixed;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+}
+
+.loader {
+    background: #000;
+    position: fixed;
+    z-index: 99999;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px);
+    width: 50px;
+    height: 50px;
+    border-radius: 75%;
+    perspective: 800px;
+}
+
+.inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.inner.one {
+    left: 0%;
+    top: 0%;
+    animation: rotate-one 1s linear infinite;
+    border-bottom: 3px solid #1e88e5;
+}
+
+.inner.two {
+    right: 0%;
+    top: 0%;
+    animation: rotate-two 1s linear infinite;
+    border-right: 3px solid #1e88e5;
+}
+
+.inner.three {
+    right: 0%;
+    bottom: 0%;
+    animation: rotate-three 1s linear infinite;
+    border-top: 3px solid #1e88e5;
+}
+
+@keyframes rotate-one {
+    0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate-two {
+    0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate-three {
+    0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.END PRELOADER & BOUNCE CCS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03.START HOMEPAGE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+#section0 {
+    padding: 0 !important;
+}
+
+#section0 .content {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+#section0 .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#section0 .bg {
+    width: 200%;
+    background: url(http://placehold.it/3000x1500) repeat-x center center;
+    -webkit-animation: animate 120s linear infinite;
+    -moz-animation: animate 120s linear infinite;
+    -ms-animation: animate 120s linear infinite;
+    -o-animation: animate 120s linear infinite;
+    animation: animate 120s linear infinite;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: ;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#section0 .bg .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.content h3 {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    padding: 0px 22px 0px 32px;
+    color: #FFF;
+}
+
+.content h1 {
+    font-style: normal;
+    letter-spacing: 0px;
+    font-weight: 200;
+    font-size: 100px;
+    color: #FFF;
+    font-stretch: expanded;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+
+.content .scrolldown {
+    display: block;
+    margin-top: 50px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb04 2s infinite;
+    animation: sdb04 2s infinite;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #FFF;
+}
+
+@-webkit-keyframes sdb04 {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+    20% {
+        -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+    }
+    40% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
+@keyframes sdb04 {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+    20% {
+        transform: rotate(-45deg) translate(-10px, 10px);
+    }
+    40% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
+.content .main-button {
+    margin-right: 10px;
+    margin-top: 25px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #333;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03.END HOMEPAGE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 04.START SIDE-NAV STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.side-nav {
+    background-image: url(images/left_menu.jpg);
+}
+
+.side-nav li {
+    text-transform: uppercase;
+}
+
+.side-nav li>a>i,
+.side-nav li>a>[class^="mdi-"],
+.side-nav li>a li>a>[class*="mdi-"],
+.side-nav li>a>i.material-icons {
+    float: left;
+    height: 48px;
+    line-height: 49px;
+    margin: 0 15px 0 0;
+    width: 24px;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 25px;
+}
+
+.side-nav .social a {
+    display: inline;
+    padding: 0;
+}
+
+.side-nav .social i {
+    line-height: 49px;
+    margin: 0px 0px 0px 35px;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 32px;
+}
+
+.side-nav li>a {
+    color: rgba(0, 0, 0, 0.87);
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 32px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.side-nav li>a:hover,
+.side-nav li.active {
+    background-color: rgba(30, 136, 229, 0.4);
+}
+
+
+/* Side Nav Button */
+
+.main {
+    color: #FFF;
+    margin: 30px;
+    font-size: 30px;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    transition: all .5s;
+    border: 1px solid #333;
+}
+
+.main:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.side-nav .userView .name,
+.side-nav .userView .email {
+    text-transform: capitalize;
+    color: #000;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 04.END SIDE-NAV STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 05.START ABOUT ME STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+#section2>div>div:nth-child(2) {
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.about p {
+color: #878787;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0 10px 20px;
+    line-height: 27px;
+    max-width: 100ch;
+}
+
+.about h5 {
+    color: #878787;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0 10px 20px;
+}
+
+.about h6 {
+
+color: #878787;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0 10px 20px;
+    line-height: 27px;
+    max-width: 100ch;
+
+}
+
+.about .cv-button {
+    text-align: left;
+}
+
+.about .cv-button a {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+
+.about .btn{
+
+
+    line-height: 32px;
+}
+
+.about .cv-button a i {
+    margin-right: 10px;
+}
+
+.about .section-info p strong {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.about h5 strong {
+    font-weight: 600;
+}
+
+.about .section-hobbies {
+    margin-top: 10px;
+}
+
+.about .border {
+    border: 1px solid #EEE;
+    transition: all .5s ease-in;
+    padding: 0;
+}
+
+.about .border:hover,
+.about .border:focus {
+    border: 1px solid rgba(30, 136, 229, 0.5);
+}
+
+.about .hobbies span {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about .hobbies span i {
+    font-size: 40px;
+    margin-top: 35px;
+    color: #1e88e5;
+    position: relative;
+}
+
+.about .hobbies span .h4 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    display: block;
+    width: 100%;
+    border: none;
+    float: none;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 05.END ABOUT ME STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06.START MY SKILLS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.circle-container {
+    width: 240px;
+    margin: auto;
+    border: 1px solid #EEE;
+    transition: all .5s ease-in;
+}
+
+.circle-container h6 {
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.circle-container:hover,
+.circle-container:focus {
+    border: 1px solid rgba(30, 136, 229, 0.5);
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06.END MY SKILLS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07.START MY SERVICES STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.service {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
+    overflow: hidden;
+    background-color: #FFF;
+    border: 1px solid #EEE;
+    transition: all .5s ease-in;
+
+}
+
+.service:hover,
+.service:focus {
+    border: 1px solid rgba(30, 136, 229, 0.5);
+}
+
+.service i {
+    font-size: 40px;
+    width: 70px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #1e88e5;
+}
+
+.service h4 {
+    position: relative;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.service .service-word {
+    padding: 10px;
+}
+
+.service .service-word p {
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.service .service-word p i {
+    float: right;
+    padding: 5px;
+    font-size: 35px;
+}
+
+.service .service-word p i:hover {
+    opacity: .8;
+}
+
+
+.modal p{
+
+    font-size: 16px !important;
+    line-height: 30px;
+
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07.END MY SERVICES STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 08.START MY WORK STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 230px;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    margin-bottom: 10px;
+}
+
+.carousel .carousel-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
+    transition: 0.8s ease-out;
+}
+
+.carousel .carousel-item .overlay {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    text-align: center;
+    transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+    -ms-transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+    -webkit-transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.carousel .carousel-item:hover .overlay {
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .carousel-item:hover img {}
+
+.carousel .carousel-item .overlay i.fa {
+    font-size: 30px;
+    color: #1e88e5;
+    position: relative;
+    top: 45%;
+    margin: auto;
+    margin-top: -18px;
+    transform: scale(0);
+    transition: 0.4s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.carousel .carousel-item:hover .overlay i.fa {
+    transform: scale(1);
+}
+
+.work {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+}
+
+.filters li {
+    display: inline-block;
+    padding: 0px 12px;
+    margin-top: 5px;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #EEE;
+    transition: .4s all;
+}
+
+
+.mixitup-control-active {
+    background: #1e88e5;
+    color: #fff !important;
+}
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 08.END MY WORK STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 09.START TESTIMONIALS & FUN FACTS
+* ----------------------------------------------------------------------------------------
+*/
+
+.testimonials .item {
+    padding: 5px;
+    border: 1px solid #EEE;
+    margin: 5px;
+    transition: all .5s ease-in;
+}
+
+.testimonials .item:hover,
+.testimonials .item:focus {
+    border: 1px solid rgba(30, 136, 229, 0.5);
+}
+
+.testimonials .item p {
+text-align: left;
+    margin: 10px;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 20px;
+    line-height: 30px
+}
+
+.testimonials h3 {
+    font-size: 20px;
+}
+
+.testimonials h4 {
+    font-size: 20px;
+}
+
+.testimonials .ion-quote {
+    color: #1e88e5;
+    font-size: 30px;
+}
+
+.testimonials .ion-star,
+.testimonials .ion-ios-star-half {
+    color: #f2b01e;
+    font-size: 20px;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+    color: #FFF;
+    font-size: 16px;
+    background-color: transparent;
+    color: #1e88e5;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: .3s all;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    color: rgba(30, 136, 229, 0.8);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.owl-prev:hover {
+    -webkit-transform: translateX(-5px);
+    -moz-transform: translateX(-5px);
+    -o-transform: translateX(-5px);
+    transform: translateX(-5px);
+}
+
+.owl-next:hover {
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -o-transform: translateX(5px);
+    transform: translateX(5px);
+}
+
+.fun-head {
+    margin-top: 0;
+}
+
+.fun {
+    padding: 5px;
+    border: 1px solid #EEE;
+    transition: all .5s ease-in;
+    margin: 5px;
+}
+
+.fun:hover,
+.fun:focus {
+    border: 1px solid rgba(30, 136, 229, 0.5);
+}
+
+.fun i {
+    color: #1e88e5;
+    font-size: 30px;
+}
+
+.fun h4 {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 09.END TESTIMONIALS & FUN FACTS
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 09.START CONTACT ME STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.contact form {
+    text-align: left;
+}
+
+.contact .single-contact-details {
+    padding: 5px;
+    border: 1px solid #EEE;
+    margin: 5px;
+    transition: all .5s ease-in;
+}
+
+.contact .single-contact-details:hover,
+.contact .single-contact-details:focus {
+    border: 1px solid rgba(30, 136, 229, 0.5);
+}
+
+.contact .single-contact-details i {
+    color: #1e88e5;
+    font-size: 40px;
+}
+
+#reg-form {
+    padding: 15px;
+    border: 1px solid #EEE;
+    transition: all .5s ease-in;
+}
+
+#reg-form:hover,
+#reg-form:focus {
+    border: 1px solid rgba(30, 136, 229, 0.5);
+}
+
+.contact h4 {
+    margin: 10px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.contact form .submit {
+    text-align: center;
+}
+
+.contact form .submit i {
+    margin-right: 10px;
+}
+
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #1e88e5;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 09.END CONTACT ME STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 09.START FIND ME STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.social-icons {
+    display: inline;
+    font-size: 30px;
+    margin: 20px;
+    background: ;
+    color: #000;
+    height: 100px;
+    width: 100px;
+    line-height: 40px;
+    text-align: center;
+    transition: all .5s;
+}
+
+.social-icons:hover {
+    color: #1e88e5;
+}
+
+
+.aido{
+
+    color: #1e88e5
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 09.END FIND ME STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.left-align {
+
+}
